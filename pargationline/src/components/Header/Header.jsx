@@ -1,13 +1,13 @@
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import brand from "../../assets/Img/brand.png";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
     <>
-      <Header>
+    header working
+    <p>hello para</p>
+      <header>
         <Navbar expand="lg" className="headerNav">
           <Container>
             <Navbar.Brand>
@@ -41,7 +41,7 @@ function Header() {
             </Navbar.Collapse>
           </Container>
         </Navbar>
-      </Header>
+      </header>
     </>
   );
 }

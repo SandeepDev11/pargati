@@ -1,15 +1,43 @@
 @font-face {
   font-family: "Pargati";
-  src: url("./assets/Font/pargati-Regular.woff2") format("woff"),
-    url("./assets/Font/pargati-Medium.woff2") format("woff"),
-    url("./assets/Font/pargati-Light.woff2") format("woff"),
-    url("./assets/Font/pargati-bold.woff2") format("woff");
+  src: url("./assets/Font/pargati-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pargati";
+  src: url("./assets/Font/pargati-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pargati";
+  src: url("./assets/Font/pargati-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pargati";
+  src: url("./assets/Font/pargati-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
 }
 
 * {
   padding: 0;
   margin: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font-synthesis: none !important;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  text-size-adjust: none;
 }
 
 body {
@@ -17,8 +45,9 @@ body {
   background-color: var(--light-color);
 }
 
-p {
-  font-weight: 500;
+::-moz-selection {
+  background-color: var(--main-color);
+  color: var(--light-color);
 }
 
 ::selection {
@@ -43,11 +72,22 @@ p {
     rgba(255, 38, 91, 1) 0%,
     rgba(3, 17, 124, 1) 82%
   );
+  --grid3-color: linear-gradient(
+    180deg,
+    rgba(0, 160, 206, 1) 0%,
+    rgba(3, 17, 124, 1) 100%
+  );
 }
 
 a {
   text-decoration: inherit !important;
   color: inherit !important;
+}
+
+main {
+  margin-top: 45px;
+  min-height: 80vh;
+  height: 100%;
 }
 
 /* -------------------------- */
@@ -69,6 +109,7 @@ a {
   right: 0;
   padding: 1.2rem 0 !important;
   z-index: 999;
+  -webkit-box-shadow: 0px 4px 10px #33333317;
   box-shadow: 0px 4px 10px #33333317;
 }
 
@@ -77,7 +118,7 @@ a {
   color: var(--main-color) !important;
   font-size: 1rem;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 500;
   &:hover {
     color: var(--site-color) !important;
   }
@@ -95,11 +136,13 @@ a {
   color: var(--light-color) !important;
   font-size: 1rem;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 500;
   padding: 0.5rem 2em;
   border-radius: 1.5rem;
   background: var(--site3-color);
   color: var(--light-color);
+  -webkit-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   text-decoration: inherit !important;
   &:hover {
@@ -116,7 +159,6 @@ a {
   height: 100%;
   background: var(--site3-color);
   color: var(--light-color);
-  margin-top: 87px;
 }
 
 .heroSection .swiper.swiper-initialized.swiper-horizontal {
@@ -140,7 +182,6 @@ a {
 }
 
 .heroContentWrapper .heroTitle {
-  font-family: 3rem !important;
   margin-bottom: 1.5rem;
 }
 
@@ -158,6 +199,8 @@ a {
   border-radius: 2rem;
   background: var(--site3-color);
   color: var(--light-color);
+  -webkit-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   text-decoration: inherit !important;
   &:hover {
@@ -170,19 +213,33 @@ a {
 }
 
 .phonepe-wealth-hp__content__item {
+  -webkit-box-align: end;
+  -ms-flex-align: end;
   align-items: flex-end;
   border: 1px solid #979797;
   border-radius: 12px;
+  -webkit-box-shadow: none;
   box-shadow: none;
   color: var(--light-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
   height: 280px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   margin: 0 12px;
   padding: 32px 0 16px;
   text-decoration: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
@@ -225,11 +282,12 @@ a {
 .phonepe-wealth-hp__content__item:hover {
   border: 1px solid var(--light-color);
   border-right: none;
+  -webkit-box-shadow: 0 19px 25px 0 rgba(0, 0, 0, 0.19);
   box-shadow: 0 19px 25px 0 rgba(0, 0, 0, 0.19);
 }
 
 .secureSection {
-  margin-bottom: 80px;
+  margin-bottom: 45px;
 }
 
 .app-overview-widget-container__collapsible-container__item h2 {
@@ -278,6 +336,7 @@ a {
 .adverThumb-section .advarImg-wrapper img {
   max-width: 500px;
   height: 450px;
+  -o-object-fit: cover;
   object-fit: cover;
   border-radius: 2rem;
   overflow: hidden;
@@ -298,6 +357,8 @@ a {
 
 .advarImg-wrapper5 {
   z-index: 1;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   &:hover {
     z-index: 9 !important;
@@ -305,6 +366,8 @@ a {
 }
 .advarImg-wrapper4 {
   z-index: 2;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   &:hover {
     z-index: 9 !important;
@@ -312,6 +375,8 @@ a {
 }
 .advarImg-wrapper3 {
   z-index: 3;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   &:hover {
     z-index: 9 !important;
@@ -319,6 +384,8 @@ a {
 }
 .advarImg-wrapper2 {
   z-index: 2;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   &:hover {
     z-index: 9 !important;
@@ -326,6 +393,8 @@ a {
 }
 .advarImg-wrapper1 {
   z-index: 1;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   &:hover {
     z-index: 9 !important;
@@ -337,6 +406,8 @@ a {
 .advarImg-wrapper3:hover img,
 .advarImg-wrapper4:hover img,
 .advarImg-wrapper5:hover img {
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   scale: 1.05;
 }
@@ -344,11 +415,13 @@ a {
 .advarImg-wrapper2 img,
 .advarImg-wrapper4 img {
   scale: 0.9;
+  -webkit-box-shadow: 0px 0px 15px #33333379;
   box-shadow: 0px 0px 15px #33333379;
 }
 .advarImg-wrapper1 img,
 .advarImg-wrapper5 img {
   scale: 0.8;
+  -webkit-box-shadow: 0px 0px 15px #33333379;
   box-shadow: 0px 0px 15px #33333379;
 }
 
@@ -361,6 +434,8 @@ a {
   line-height: 32px;
   margin-bottom: 25px;
   width: 244px;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
   min-width: max-content;
   &:hover {
     background-color: var(--site3-color);
@@ -384,6 +459,8 @@ a {
 }
 
 .trust-widget {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background: var(--site3-color);
   background-image: url(https://www.phonepe.com/webstatic/8559/static/trust-banner-861f26253b71e00c083fd5f6c2ea30fc.png);
@@ -391,12 +468,19 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 32px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   color: var(--light-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
   overflow: hidden;
   padding: 22px;
+  -webkit-transform: translateY(138px);
+  -ms-transform: translateY(138px);
   transform: translateY(138px);
   width: 100%;
   min-height: 330px;
@@ -408,8 +492,15 @@ a {
 }
 
 .trust-widget .trust-widget__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   margin-left: 17%;
   min-width: 100%;
@@ -437,11 +528,20 @@ a {
   margin-right: 32px;
   vertical-align: middle;
   width: 100px;
+  -webkit-filter: invert(1);
   filter: invert(1);
 }
 
 .partner-showcase-container {
   /* background: linear-gradient(#ddd8fa, #fff); */
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#d9eff3),
+    to(#fff)
+  );
+  background: -o-linear-gradient(#d9eff3, #fff);
   background: linear-gradient(#d9eff3, #fff);
   margin-bottom: 100px;
   padding-top: 200px;
@@ -464,10 +564,12 @@ a.btn-container span.btn-container__btn {
   line-height: 57px;
   margin: 0 auto;
   min-width: -moz-max-content;
+  min-width: -webkit-max-content;
   min-width: max-content;
   padding: 0 16px;
   -webkit-user-select: none;
   -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 
@@ -476,6 +578,8 @@ a.btn-container span.btn-container__btn span.arrow {
   left: 0;
   margin-left: 18px;
   position: relative;
+  -webkit-transition: all 0.2s ease 0s;
+  -o-transition: all 0.2s ease 0s;
   transition: all 0.2s ease 0s;
 }
 
@@ -485,6 +589,8 @@ a.btn-container span.btn-container__btn:hover span.arrow {
 
 a.btn-container span.btn-container__btn:hover {
   background-color: #0dcbe4;
+  -webkit-box-shadow: 0 17px 24px 0 rgba(162, 224, 217, 0),
+    0 5px 12px 0 rgba(48, 229, 252, 0.5);
   box-shadow: 0 17px 24px 0 rgba(162, 224, 217, 0),
     0 5px 12px 0 rgba(48, 229, 252, 0.5);
 }
@@ -505,6 +611,8 @@ h2.partner-showcase-container__title {
 
 .businessTitle-warpper:hover {
   padding-right: 0 !important;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -520,16 +628,16 @@ h2.partner-showcase-container__title {
 .app-stats {
   background-color: var(--site3-color);
   color: var(--light-color);
-  background-image: url(./assets/Img/appStats.png);
-  background-position: 0 100%;
+  background-image: url(/src/assets/Img/appStats.png);
+  background-position: center;
   background-repeat: repeat-x;
-  background-size: 100%;
-  /* height: 444px; */
+  background-size: cover;
+  height: 444px;
   margin: 0 auto;
 }
 
 .app-stats-banner .app-stats-banner__item__text {
-  color: #fff;
+  color: var(--light-color);
   font-size: 2.5rem;
   font-weight: 500;
 }
@@ -542,8 +650,14 @@ h2.partner-showcase-container__title {
 }
 
 .app-stats-banner .app-stats-banner__footerContent {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 3rem 0px;
 }
@@ -560,4 +674,358 @@ h2.partner-showcase-container__title {
 
 .appStatsBtn {
   margin-right: 10rem;
+}
+
+footer {
+  padding-block: 45px 20px;
+}
+
+.footerMenu-list h5 {
+  font-size: 1rem;
+  font-weight: 500 !important;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.footerMenu-list {
+  margin: 10px 0px;
+}
+
+.footerMenu-list a {
+  color: var(--main-color);
+  font-size: 0.875rem;
+  font-weight: 300;
+  letter-spacing: -0.21px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.copyright-section {
+  border-top: 1px solid #00000025;
+}
+
+.copyright-section p {
+  color: var(--main-color);
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 2.43;
+  text-align: center;
+  word-spacing: 1px;
+  padding-top: 1rem;
+}
+
+.footerMenu-list a:hover {
+  font-size: 14.5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  color: var(--site3-color) !important;
+}
+
+.mobile-recharge {
+  background: var(--grid3-color);
+  color: var(--light-color);
+  scale: 0.9;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    scale: 1;
+    -webkit-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    transform: translateY(-20px);
+    -webkit-box-shadow: 0 19px 25px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 19px 25px 0 rgba(0, 0, 0, 0.19);
+  }
+}
+
+.mobile-recharge-imgWrapper {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: var(--light-color);
+  color: var(--site3-color);
+  margin-bottom: 2.1rem;
+  border: 3px solid #ff734aad !important;
+}
+
+.go-button {
+  padding: 11px 75px;
+  text-align: right;
+  background-color: var(--site3-color);
+  border: 1px solid var(--site3-color);
+  color: var(--light-color);
+  font-size: 17px;
+  border-radius: 7px;
+  margin-bottom: 0.1rem;
+  &:hover {
+    color: var(--site3-color);
+    background-color: var(--light-color);
+    border: 1px solid var(--light-color);
+    -webkit-box-shadow: 0px 1px 8px #03117c26;
+    box-shadow: 0px 1px 8px #03117c26;
+  }
+}
+
+.form-select:focus,
+.form-control:focus {
+  border-color: var(--site3-color);
+  outline: 0;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.formArea {
+  background-color: var(--light-color);
+  padding: 45px;
+  -webkit-box-shadow: 10px 0 45px #031b8117;
+  box-shadow: 10px 0 45px #031b8117;
+  /* max-width: 67% !important; */
+  margin: auto;
+  border-radius: 1.5rem;
+}
+
+.advantagesSection {
+  margin-top: 5rem;
+}
+
+.form-label {
+  margin-bottom: 0.2rem !important;
+  font-size: 14px;
+  color: var(--site3-color);
+}
+
+.formMargin {
+  margin-inline: 3rem;
+}
+
+@media (width < 576px) {
+  .bannerSecondCol.col-lg-6 {
+    display: none;
+  }
+
+  .heroContentWrapper .heroTitle {
+    line-height: 1.5;
+  }
+
+  .herobutton {
+    font-weight: 500;
+  }
+
+  .phonepe-wealth-hp__content__item {
+    margin-bottom: 1.5rem !important;
+  }
+
+  .formArea {
+    background-color: var(--light-color);
+    padding: 30px;
+    -webkit-box-shadow: 10px 0 45px #031b8117;
+    box-shadow: 10px 0 45px #031b8117;
+    max-width: 95% !important;
+    margin: auto;
+    border-radius: 1.5rem;
+  }
+
+  .formRow {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    /* gap: 1rem; */
+  }
+
+  .go-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .advantagesSection {
+    margin-top: 3rem;
+  }
+
+  .advantagesSection .adImg img {
+    width: 300px !important;
+    margin-bottom: 1rem;
+  }
+
+  .advartmentsVideo {
+    min-height: 380px;
+  }
+
+  .adverThumb-section .advarImg-wrapper img {
+    max-width: 329px;
+    height: 295px;
+  }
+
+  .trust-widget {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .trust-widget__secureimg-container {
+    padding: 1rem;
+  }
+
+  .trust-widget .trust-widget__container {
+    text-align: center;
+    margin-left: 0;
+    padding: 2rem 0;
+  }
+
+  .app-stats-banner.container {
+    padding: 3rem 1rem;
+  }
+
+  .app-stats-banner__footerContent {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+    -ms-flex-direction: column !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+    padding: 0 !important;
+  }
+
+  .app-stats {
+    background-image: none !important;
+  }
+
+  .appStatsBtn {
+    margin-right: 5rem;
+  }
+
+  .app-stats-banner__item {
+    margin-bottom: 2rem !important;
+  }
+
+  .app-stats-banner .app-stats-banner__item__subtext {
+    font-size: 1.4rem;
+    font-weight: lighter;
+    line-height: 1.6;
+  }
+
+  a.btn-container span.btn-container__btn {
+    font-size: 1.3rem;
+  }
+
+  .social-icons ul {
+    -webkit-box-pack: start !important;
+    -ms-flex-pack: start !important;
+    justify-content: start !important;
+  }
+
+  .footerlogoArea {
+    padding-bottom: 1rem;
+  }
+
+  .app-overview-widget-container__collapsible-container {
+    padding-top: 3rem;
+  }
+}
+@media (width < 990px) {
+  .bannerSecondCol.col-lg-6 {
+    display: none;
+  }
+  .silderbg .container .row .col-lg-6 {
+    width: 100%;
+  }
+  .phonepe-wealth-hp__content__item .arrow-el,
+  .phonepe-wealth-hp__content__item h2 {
+    font-size: 16px;
+  }
+
+  .phonepe-wealth-hp__content__item {
+    height: 150px;
+  }
+
+  .social-icons ul {
+    -webkit-box-pack: start !important;
+    -ms-flex-pack: start !important;
+    justify-content: start !important;
+  }
+
+  .footerlogoArea.col-lg.col-md-4.col-6 {
+    width: 100%;
+  }
+  .app-stats {
+    height: unset;
+  }
+  .adImg img {
+    width: 300px !important;
+  }
+  .trust-widget .trust-widget__container {
+    margin-left: 2%;
+  }
+  .trust-widget .trust-widget__container h2 {
+    font-size: 1.5rem;
+  }
+  .trust-widget .trust-widget__container p {
+    font-size: 14px;
+    text-wrap: wrap !important;
+    width: 50%;
+  }
+  .app-stats-banner .app-stats-banner__item__text {
+    font-size: 2rem;
+  }
+  .app-stats-banner__footerContent p {
+    font-size: 1.3rem;
+    line-height: 27px;
+  }
+  .appStatsBtn {
+    margin-right: 0;
+  }
+}
+@media (width < 1280px) {
+  .navbarMenuList a {
+    font-size: 16px;
+  }
+}
+@media (width < 1200px) {
+  .userAuth,
+  .navbarMenuList {
+    gap: 0.5rem;
+  }
+
+  .brandLogo {
+    margin-right: 0rem;
+  }
+
+  .navbarMenuList a {
+    font-size: 12px;
+  }
+
+  .userAuth a {
+    font-size: 0.8rem;
+  }
+
+  .phonepe-wealth-hp__content__item {
+    height: 225px;
+  }
+
+  .phonepe-wealth-hp__content__item .arrow-el,
+  .phonepe-wealth-hp__content__item h2 {
+    margin-left: 14px;
+  }
+
+  .app-overview-widget-heading {
+    font-size: 28px;
+  }
+
+  .formMargin {
+    margin-inline: 1rem;
+  }
+}
+@media (width < 1400px) {
+  .navbarMenuList {
+    gap: 1.2rem;
+  }
+
+  .brandLogo {
+    margin-right: 2rem !important;
+  }
 }

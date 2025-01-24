@@ -1,5 +1,4 @@
-import { Col, Container, Row } from "react-bootstrap";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 function Wealth({ wealth }) {
   const { wealthUrl, wealthTitle, wealthClass } = wealth;

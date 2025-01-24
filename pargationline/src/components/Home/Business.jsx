@@ -1,5 +1,5 @@
 import { IoIosArrowForward } from "react-icons/io";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 function Business({ business }) {
   const { businessTitle, businessPara ,businessUrl } = business;

@@ -1,5 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 function HeroBanner({ data }) {
   const { heroBg, heroTitle, herodesc, buttonText, urlButton } = data;
