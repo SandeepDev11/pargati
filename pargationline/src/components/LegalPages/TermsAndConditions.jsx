@@ -8,9 +8,9 @@ function TermsAndConditions() {
           <h2>Terms and Conditions</h2>
           <p>
             Welcome to Pargationline. By using our website, services, and mobile
-            applications (collectively referred to as the "WEBSITE"), you agree
+            applications (collectively referred to as the WEBSITE, you agree
             to comply with and be bound by the following terms and conditions
-            ("TERMS"). Please review these TERMS carefully. If you do not agree
+            TERMS. Please review these TERMS carefully. If you do not agree
             to these TERMS, you should not use this WEBSITE.
           </p>
 

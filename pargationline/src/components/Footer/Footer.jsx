@@ -6,6 +6,7 @@ import linkedIn from "../../assets/Img/linkedIn.svg";
 import youtube from "../../assets/Img/youtube.svg";
 import facebook from "../../assets/Img/facebook.svg";
 import x from "../../assets/Img/x.svg";
+import { MdDarkMode } from "react-icons/md";
 
 function Footer() {
   return (
@@ -172,6 +173,9 @@ function Footer() {
           </div>
           <div className="copyright-section">
             <p className="mb-0">© 2024, All rights reserved</p>
+          </div>
+          <div className="switch-mode">
+            <MdDarkMode />
           </div>
         </Container>
       </footer>

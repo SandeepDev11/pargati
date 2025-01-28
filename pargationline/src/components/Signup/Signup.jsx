@@ -2,9 +2,15 @@ import { Col, Container, Row } from "react-bootstrap";
 import brand from "../../assets/Img/brand.png";
 import { Link } from "react-router";
 import loginBg from "../../assets/Img/loginBg.png";
-import { FaArrowLeft } from "react-icons/fa";
+import { FaArrowLeft, FaEye, FaEyeSlash } from "react-icons/fa";
+import { useState } from "react";
 
 function Signup() {
+  const [passwordVisible, setPasswordVisible] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setPasswordVisible(!passwordVisible);
+  };
   return (
     <>
       <main className="login-main">
@@ -106,12 +112,21 @@ function Signup() {
                       <Col lg={4} md={6} sm={12}>
                         <div className="form-group">
                           <label>Password</label>
-                          <input
-                            type="password"
-                            id="password"
-                            placeholder="Enter your password"
-                            autoComplete="new-password"
-                          />
+                          <div className="password-wrapper">
+                            <input
+                              type={passwordVisible ? "text" : "password"}
+                              id="password"
+                              placeholder="Enter your password"
+                              autoComplete="current-password"
+                            />
+                            <button
+                              type="button"
+                              className="border-0 bg-transparent password-toggle-btn"
+                              onClick={togglePasswordVisibility}
+                            >
+                              {passwordVisible ? <FaEyeSlash /> : <FaEye />}
+                            </button>
+                          </div>
                           <div className="error" id="passwordError"></div>
                         </div>
                       </Col>

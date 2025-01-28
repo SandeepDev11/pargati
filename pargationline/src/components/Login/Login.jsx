@@ -1,10 +1,17 @@
+import { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import brand from "../../assets/Img/brand.png";
 import { Link } from "react-router";
 import loginBg from "../../assets/Img/loginBg.png";
-import { FaArrowLeft } from "react-icons/fa";
+import { FaArrowLeft, FaEye, FaEyeSlash } from "react-icons/fa";
 
 function Login() {
+  const [passwordVisible, setPasswordVisible] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setPasswordVisible(!passwordVisible);
+  };
+
   return (
     <>
       <main className="login-main">
@@ -49,12 +56,21 @@ function Login() {
 
                     <div className="form-group">
                       <label>Password</label>
-                      <input
-                        type="password"
-                        id="password"
-                        placeholder="Enter your password"
-                        autoComplete="current-password"
-                      />
+                      <div className="password-wrapper">
+                        <input
+                          type={passwordVisible ? "text" : "password"}
+                          id="password"
+                          placeholder="Enter your password"
+                          autoComplete="current-password"
+                        />
+                        <button
+                          type="button"
+                          className="border-0 bg-transparent password-toggle-btn"
+                          onClick={togglePasswordVisibility}
+                        >
+                          {passwordVisible ? <FaEyeSlash /> : <FaEye />}
+                        </button>
+                      </div>
                       <div className="error" id="passwordError"></div>
                     </div>
 
@@ -78,10 +94,6 @@ function Login() {
                   </form>
 
                   <div className="signup-link">
-                    {/* <p className="mb-0 pb-1">
-                      By continuing you accept our{" "}
-                      <Link to="/">Terms of Use</Link>
-                    </p> */}
                     <p>
                       Don't have an account? <Link to="/register">Sign up</Link>
                     </p>

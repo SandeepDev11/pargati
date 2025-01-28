@@ -160,7 +160,7 @@ main {
 }
 
 .swiper-pagination-bullet-active {
-  background: #ffffff !important;
+  background: var(--light-color) !important;
 }
 
 .heroSection {
@@ -542,7 +542,7 @@ main {
 }
 
 .partner-showcase-container {
-  /* background: linear-gradient(#ddd8fa, #fff); */
+  background: -o-linear-gradient(#d9eff3, #fff);
   background: -webkit-gradient(
     linear,
     left top,
@@ -550,7 +550,6 @@ main {
     from(#d9eff3),
     to(#fff)
   );
-  background: -o-linear-gradient(#d9eff3, #fff);
   background: linear-gradient(#d9eff3, #fff);
   margin-bottom: 100px;
   padding-top: 200px;
@@ -736,6 +735,7 @@ footer {
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  -webkit-box-shadow: 0px 8px 30px #0000001a;
   box-shadow: 0px 8px 30px #0000001a;
   &:hover {
     scale: 1;
@@ -820,6 +820,7 @@ footer {
   padding: 3rem 2rem;
   width: 100%;
   max-width: 630px;
+  -webkit-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
   margin: auto;
 }
@@ -865,24 +866,37 @@ footer {
   border: 2px solid var(--main-color);
   border-radius: 12px;
   font-size: 1rem;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
 .form-group input:focus {
   outline: none;
   border-color: var(--main-color);
+  -webkit-box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
 }
 
 .remember-forgot {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-bottom: 1.5rem;
 }
 
 .remember-me {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 0.5rem;
 }
@@ -915,11 +929,15 @@ footer {
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
 .login-btn:hover {
   background: var(--grid-color);
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
   transform: translateY(-2px);
 }
 
@@ -945,22 +963,44 @@ footer {
   display: none;
 }
 
-@keyframes shake {
+@-webkit-keyframes shake {
   0%,
   100% {
+    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
   20%,
   60% {
+    -webkit-transform: translateX(-5px);
     transform: translateX(-5px);
   }
   40%,
   80% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  20%,
+  60% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+  40%,
+  80% {
+    -webkit-transform: translateX(5px);
     transform: translateX(5px);
   }
 }
 
 .shake {
+  -webkit-animation: shake 0.5s ease;
   animation: shake 0.5s ease;
 }
 
@@ -979,8 +1019,14 @@ footer {
   display: inline-block;
   height: 3rem;
   width: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   border-radius: 50%;
   color: var(--light-color);
@@ -1020,6 +1066,7 @@ main.about-page {
 }
 
 .aboutBannerImg img {
+  -webkit-filter: drop-shadow(0px 3px 35px #a5a5a54d);
   filter: drop-shadow(0px 3px 35px #a5a5a54d);
 }
 
@@ -1029,12 +1076,14 @@ main.about-page {
   width: 100%;
   background-color: var(--light-color);
   padding: 2rem;
+  -webkit-box-shadow: 0px 3px 20px #91919115;
   box-shadow: 0px 3px 20px #91919115;
   border-radius: 1rem;
 }
 
 .features-section {
   padding: 2rem;
+  -webkit-box-shadow: 0px 3px 15px #9191911c;
   box-shadow: 0px 3px 15px #9191911c;
   border-radius: 1rem;
   background-color: var(--light-color);
@@ -1063,8 +1112,12 @@ main.about-page {
 .teamInfo-Img img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
+  -o-object-position: top;
   object-position: top;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -1073,6 +1126,18 @@ main.about-page {
   bottom: -12%;
   width: 100%;
   padding: 1rem;
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(70%, rgba(0, 0, 0, 0.8)),
+    to(rgba(0, 0, 0, 0))
+  );
+  background: -o-linear-gradient(
+    bottom,
+    rgba(0, 0, 0, 0.8) 70%,
+    rgba(0, 0, 0, 0) 100%
+  );
   background: linear-gradient(
     0deg,
     rgba(0, 0, 0, 0.8) 70%,
@@ -1082,8 +1147,64 @@ main.about-page {
 
 .teamInfo:hover .teamInfo-content {
   bottom: 0%;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   z-index: 999;
+}
+
+/*======================
+    404 page
+=======================*/
+
+.page_404 {
+  padding: 40px 0;
+  background: var(--light-color);
+}
+
+.page_404 img {
+  width: 100%;
+}
+
+.four_zero_four_bg {
+  background-image: url(./assets/Img/404.gif);
+  height: 400px;
+  background-position: center;
+}
+
+.four_zero_four_bg h1 {
+  font-size: 80px;
+}
+
+.four_zero_four_bg h3 {
+  font-size: 80px;
+}
+
+.link_404 {
+  color: var(--light-color) !important;
+  padding: 10px 20px;
+  background: var(--site3-color);
+  margin: 20px 0;
+  display: inline-block;
+  border-radius: 1.5rem;
+}
+
+.contant_box_404 {
+  margin-top: -50px;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-toggle-btn {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 /* --------------------------- */
@@ -1237,6 +1358,9 @@ main.about-page {
     max-width: 100% !important;
   }
   .features-section-row.row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
   }
 }
@@ -1371,4 +1495,21 @@ main.about-page {
   .brandLogo {
     margin-right: 2rem !important;
   }
+}
+
+
+.switch-mode{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color:var(--site3-color);
+  color: var(--light-color);
+  height: 2.5rem;
+  width: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
 }

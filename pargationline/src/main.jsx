@@ -4,11 +4,11 @@ import App from "./App";
 import "bootstrap/dist/css/bootstrap.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./components/Home/Home";
-import Login from "./components/Login/Login";
-import Page404 from "./components/Page404/Page404";
-import Signup from "./components/Signup/Signup";
-import PrivacyPolicy from "./components/LegalPages/PrivacyPolicy";
 import About from "./components/About/About";
+import Login from "./components/Login/Login";
+import Signup from "./components/Signup/Signup";
+import Page404 from "./components/Page404/Page404";
+import PrivacyPolicy from "./components/LegalPages/PrivacyPolicy";
 import TermsAndConditions from "./components/LegalPages/TermsAndConditions";
 
 const router = createBrowserRouter([
