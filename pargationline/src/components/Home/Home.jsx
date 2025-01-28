@@ -29,6 +29,8 @@ import recharge1 from "../../assets/Img/MobilePostpaid.png";
 import recharge2 from "../../assets/Img/MobilePostpaid2.png";
 import recharge3 from "../../assets/Img/MobilePostpaid3.png";
 import recharge4 from "../../assets/Img/MobilePostpaid4.png";
+import andriodicon from "../../assets/Img/andriod-icon.png";
+import apkicon from "../../assets/Img/apk-icon.png";
 
 function Home() {
   const data = [
@@ -195,6 +197,21 @@ function Home() {
                 {secure.map((items, index) => (
                   <Secure secure={items} key={index} />
                 ))}
+                <div>
+                  <h4>Get the App</h4>
+                  <div className="getApp d-flex gap-3 align-items-center">
+                    <Link to="/">
+                      <img src={andriodicon} alt="" className="getAppImg" />
+                    </Link>
+                    <Link to="/">
+                      <img
+                        src={apkicon}
+                        alt=""
+                        className="getAppImg getAppImg2"
+                      />
+                    </Link>
+                  </div>
+                </div>
               </div>
             </Col>
             <Col lg={7} md={6} sm={12} className="text-end">
@@ -210,7 +227,7 @@ function Home() {
         </Container>
 
         {/* Mobile Recharge */}
-        <Container className="mobile-recharge-wrapper mb-5 pb-5">
+        <Container className="mobile-recharge-wrapper mb-0 mb-lg-5 mb-md-5 pb-5">
           <Row>
             {postpaid.map((items, index) => (
               <Col lg={3} md={6} sm={12} key={index}>
@@ -223,13 +240,17 @@ function Home() {
         {/* Form - Recharge Now */}
         <Container className="formArea">
           <Form className="formMargin">
-            <h4 className="fw-bold" style={{color: "var(--site3-color)"}}>Recharge Now</h4>
+            <h4 className="fw-bold" style={{ color: "var(--site3-color)" }}>
+              Recharge Now
+            </h4>
             <Row className="formRow align-items-end py-4">
               <Col lg md={6} sm={12} className="mb-3 mb-md-3 mb-lg-0">
                 <Form.Group controlId="formGridState">
                   <Form.Label>Select Operator</Form.Label>
-                  <Form.Select defaultValue="Choose..."
-                  style={{padding:"0.8rem"}}>
+                  <Form.Select
+                    defaultValue="Choose..."
+                    style={{ padding: "0.8rem" }}
+                  >
                     <option> NTC Prepaid</option>
                     <option> NCell Prepaid</option>
                     <option> Smart Cell Prepaid</option>
@@ -243,35 +264,42 @@ function Home() {
                   <Form.Control
                     type="text"
                     placeholder="Enter a number"
-                    style={{padding:"0.8rem"}}
+                    style={{ padding: "0.8rem" }}
                   />
                 </Form.Group>
               </Col>
               <Col lg md={6} sm={12} className="mb-3 mb-md-3 mb-lg-0">
-              <Form.Group controlId="formNumberInput">
+                <Form.Group controlId="formNumberInput">
                   <Form.Label>NPR Recharge Amount</Form.Label>
                   <Form.Control
                     type="number"
                     placeholder="0"
-                    style={{padding:"0.8rem"}}
+                    style={{ padding: "0.8rem" }}
                   />
                 </Form.Group>
               </Col>
               <Col lg md={6} sm={12} className="mb-3 mb-md-3 mb-lg-0">
-              <Form.Group controlId="formNumberInput">
+                <Form.Group controlId="formNumberInput">
                   <Form.Label>INR Amount</Form.Label>
                   <Form.Control
                     type="number"
                     placeholder="0"
-                    style={{padding:"0.8rem"}}
+                    style={{ padding: "0.8rem" }}
                   />
                 </Form.Group>
               </Col>
-              <Col lg md={12} sm={12} className="mb-3 mb-md-3 mb-lg-0 text-center">
-                <button className="go-button" >RECHARGE</button>
+              <Col
+                lg
+                md={12}
+                sm={12}
+                className="mb-3 mb-md-3 mb-lg-0 text-center"
+              >
+                <button className="go-button">RECHARGE</button>
               </Col>
             </Row>
-            <p className="text-danger text-center">NOTE: 8% Processing Fee will be charged extra.</p>
+            <p className="text-danger text-center">
+              NOTE: 8% Processing Fee will be charged extra.
+            </p>
           </Form>
         </Container>
 

@@ -34,7 +34,7 @@ function Header() {
                 <Link className="btn-16" to="/login">
                   Login
                 </Link>
-                <Link className="btn-16" to="/signup">
+                <Link className="btn-16" to="/register">
                   Signup
                 </Link>
               </div>
